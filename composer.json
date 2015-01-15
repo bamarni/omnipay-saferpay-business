@@ -1,0 +1,33 @@
+{
+    "name": "bamarni/omnipay-saferpay-business",
+    "description": "Saferpay Business payment gateway for Omnipay",
+    "type": "omnipay-gateway",
+    "keywords": ["omnipay", "payment", "gateway", "saferpay", "business", "provider"],
+    "license": "Unlicense",
+    "authors": [
+        {
+            "name": "Bilal Amarni",
+            "email": "bilal.amarni@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Bamarni\\Omnipay\\Saferpay\\Business\\" : "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bamarni\\Omnipay\\Saferpay\\Business\\Tests\\" : "tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.4",
+        "omnipay/common": "~2.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "~2.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}
