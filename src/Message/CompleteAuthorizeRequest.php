@@ -11,10 +11,26 @@ class CompleteAuthorizeRequest extends AbstractRequest
             'spPassword' => $this->getSpPassword(),
             'AMOUNT' => $this->getAmountInteger(),
             'CURRENCY' => $this->getCurrency(),
-            'CARDREFID' => 'simplesurance',
+            'IBAN' => $this->getIban(),
         ];
 
+        if ($card = $this->getCard()) {
+            $data['PAN'] = $card->getNumber();
+            $data['EXP'] = $card->getExpiryDate('my');
+            $data['CVC'] = $card->getCvv();
+        }
+
         return $data;
+    }
+
+    public function getIBAN()
+    {
+        return $this->getParameter('IBAN');
+    }
+
+    public function setIBAN($value)
+    {
+        return $this->setParameter('IBAN', $value);
     }
 
     protected function getEndpoint()

@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Cache-Control: private
+Content-Length: 353
+Content-Type: text/html
+Server: Microsoft-IIS/7.5
+Set-Cookie: ASPSESSIONIDQWQCTBSR=NJHADGPCKACGEFGJCDGIBPKP; secure; path=/
+X-Powered-By: ASP.NET
+Date: Tue, 20 Jan 2015 15:16:25 GMT
+
+OK:<IDP RESULT="0" MSGTYPE="AuthorizationResponse" ID="Y29lE1bjxztCSAAfW85UA96I6Utb" TOKEN="(unused)" AUTHRESULT="1" AUTHMESSAGE="request was processed successfully" AUTHCODE="000000" PROVIDERID="90" PROVIDERNAME="Saferpay Test Card" ECI="0" CCCOUNTRY="US" CONTRACTNUMBER="123456789" AUTHDATE="20150120 16:16:25" EXP="1215" PAN="xxxx xxxx xxxx 0103"/>
