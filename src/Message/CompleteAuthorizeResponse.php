@@ -34,4 +34,9 @@ class CompleteAuthorizeResponse extends AbstractResponse
     {
         return $this->successful;
     }
+
+    public function getTransactionReference()
+    {
+        return (string) $this->data->attributes()->ID;
+    }
 }
