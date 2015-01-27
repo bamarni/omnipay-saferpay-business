@@ -2,9 +2,9 @@
 
 namespace Bamarni\Omnipay\Saferpay\Business\Message;
 
-use Omnipay\Common\Message\AbstractRequest;
+use Omnipay\Common\Message\AbstractRequest as BaseAbstractRequest;
 
-class AuthorizeRequest extends AbstractRequest
+class AuthorizeRequest extends BaseAbstractRequest
 {
     public function getData()
     {
