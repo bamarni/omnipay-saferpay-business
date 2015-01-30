@@ -22,7 +22,10 @@ class GatewayTest extends GatewayTestCase
     {
         $this->setMockHttpResponse('CompleteAuthorizeSuccess.txt');
 
-        $response = $this->gateway->completeAuthorize()->send();
+        $response = $this->gateway->completeAuthorize([
+            'amount' => 20.50,
+            'IBAN' => 'DE17970000011234567890',
+        ])->send();
 
         $this->assertInstanceOf('\Bamarni\Omnipay\Saferpay\Business\Message\CompleteAuthorizeResponse', $response);
         $this->assertTrue($response->isSuccessful());
