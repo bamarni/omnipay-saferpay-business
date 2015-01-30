@@ -40,7 +40,7 @@ class CompleteAuthorizeRequest extends AbstractRequest
 
     public function getCardHolderName()
     {
-        return $this->getParameter('cardHolderName');
+        return htmlspecialchars_decode($this->getParameter('cardHolderName'));
     }
 
     public function setCardHolderName($value)
