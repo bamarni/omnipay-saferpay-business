@@ -9,9 +9,18 @@ class AuthorizeRequest extends AbstractRequest
     public function getData()
     {
         return [
-            'returnUrl' => $this->getReturnUrl(),
-            'cancelUrl' => $this->getCancelUrl(),
+            'redirectUrl' => $this->getRedirectUrl() ?: $this->getReturnUrl(),
         ];
+    }
+
+    public function getRedirectUrl()
+    {
+        return $this->getParameter('redirectUrl');
+    }
+
+    public function setRedirectUrl($value)
+    {
+        return $this->setParameter('redirectUrl', $value);
     }
 
     public function send()

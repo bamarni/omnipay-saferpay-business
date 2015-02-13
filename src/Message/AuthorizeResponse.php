@@ -21,7 +21,7 @@ class AuthorizeResponse extends AbstractResponse implements RedirectResponseInte
 
     public function getRedirectUrl()
     {
-        return $this->request->getData()['returnUrl'];
+        return $this->request->getData()['redirectUrl'];
     }
 
     public function getRedirectMethod()
