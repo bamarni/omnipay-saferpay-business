@@ -17,6 +17,7 @@ class CompleteAuthorizeRequest extends AbstractRequest
             'CURRENCY' => $this->getCurrency(),
             'NAME' => $this->getCardHolderName(),
             'IBAN' => $this->getIban(),
+            'MANDATEID' => $this->getMandateId(),
         ];
 
         if ($card = $this->getCard()) {
@@ -36,6 +37,16 @@ class CompleteAuthorizeRequest extends AbstractRequest
         }
 
         return $data;
+    }
+
+    public function getMandateId()
+    {
+        return $this->getParameter('mandateId');
+    }
+
+    public function setMandateId($value)
+    {
+        return $this->setParameter('mandateId', $value);
     }
 
     public function getCardHolderName()
