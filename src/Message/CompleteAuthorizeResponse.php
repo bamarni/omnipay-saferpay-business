@@ -41,4 +41,15 @@ class CompleteAuthorizeResponse extends AbstractResponse
             return (string) $this->data->attributes()->ID;
         }
     }
+
+    public function getMessage()
+    {
+        $authMessage = [];
+
+        if (preg_match('/AUTHMESSAGE="([^"]*)"/i', $this->data, $authMessage)) {
+            return $authMessage[1];
+        } else {
+            return '';
+        }
+    }
 }
